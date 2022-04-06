@@ -1,0 +1,15 @@
+IPV4
+DNS : 
+127.0.0.1
+8.8.8.8
+
+
+IPV6
+DNS
+::1
+
+
+
+jgn lupa tambahkan varibel Envierement..
+
+Configuration...

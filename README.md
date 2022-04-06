@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.com/ahmadfaisall.020597/faisal-laravel.git
+git remote add origin https://gitlab.com/freelance119/faisal-laravel.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/ahmadfaisall.020597/faisal-laravel/-/settings/integrations)
+- [ ] [Set up project integrations](https://gitlab.com/freelance119/faisal-laravel/-/settings/integrations)
 
 ## Collaborate with your team
 
