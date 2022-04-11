@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,58 +39,7 @@ Route::get('/about', function () {
 });
 
 
-Route::get('/posts', function () {
-    $posts_posts = [
-        [
-            "tittle" => "Judul Post Pertama",
-            "slug" => "judul-post-pertama",
-            "author" => "Ahmad Faisal",
-            "body" => "Apa itu Laravel Anda pasti tahu bahasa pemrograman PHP? Laravel adalah satu-satunya framework yang membantu Anda untuk memaksimalkan penggunaan PHP di dalam proses pengembangan website. PHP menjadi bahasa pemrograman yang sangat dinamis, tapi semenjak adanya Laravel, dia menjadi lebih powerful, cepat, aman, dan simpel. Setiap rilis versi terbaru, Laravel  selalu memunculkan teknologi baru di antara framework PHP lainnya."
-        ],
-        [
-            "tittle" => "Judul Post Kedua",
-            "slug" => "judul-post-kedua",
-            "author" => "Rara Ayu",
-            "body" => "Laravel diluncurkan sejak tahun 2011 dan mengalami pertumbuhan yang cukup eksponensial. Di tahun 2015, Laravel adalah framework yang paling banyak mendapatkan bintang di Github. Sekarang framework ini menjadi salah satu yang populer di dunia, tidak terkecuali di Indonesia. "
-        ]
-        ];
-
-    return view('posts', [
-        "tittle" => "Posts",
-        "posts" => $posts_posts
-    ]);
-});
-
-
+Route::get('/posts', [PostController::class, 'index']);
 
 // Halaman Single Posts
-
-Route ::get('posts/{slug}', function($slug){
-    $posts_posts = [
-        [
-            "tittle" => "Judul Post Pertama",
-            "slug" => "judul-post-pertama",
-            "author" => "Ahmad Faisal",
-            "body" => "Apa itu Laravel Anda pasti tahu bahasa pemrograman PHP? Laravel adalah satu-satunya framework yang membantu Anda untuk memaksimalkan penggunaan PHP di dalam proses pengembangan website. PHP menjadi bahasa pemrograman yang sangat dinamis, tapi semenjak adanya Laravel, dia menjadi lebih powerful, cepat, aman, dan simpel. Setiap rilis versi terbaru, Laravel  selalu memunculkan teknologi baru di antara framework PHP lainnya."
-        ],
-        [
-            "tittle" => "Judul Post Kedua",
-            "slug" => "judul-post-kedua",
-            "author" => "Rara Ayu",
-            "body" => "Laravel diluncurkan sejak tahun 2011 dan mengalami pertumbuhan yang cukup eksponensial. Di tahun 2015, Laravel adalah framework yang paling banyak mendapatkan bintang di Github. Sekarang framework ini menjadi salah satu yang populer di dunia, tidak terkecuali di Indonesia. "
-        ]
-        ];
-
-        $new_post = [];
-        foreach($posts_posts as $post){
-            if ($post["slug"] === $slug){
-                $new_post = $post;
-            }
-        }
-
-
-    return view ('post',[
-        "tittle" => "Single Post",
-        "post" => $new_post
-    ]);
-});
+Route::get('/posts/{slug}', [PostController::class, 'show']);
