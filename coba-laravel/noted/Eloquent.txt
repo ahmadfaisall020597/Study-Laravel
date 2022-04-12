@@ -1,0 +1,37 @@
+cara mengisi database secara automatis melalu terminal :
+1. ketikan di terminal : php artisan tinker
+2. Letakan di folder yang ingin di buat contoh :
+    new App\Models\User;
+3. ketikan atau isi database yang mau di isi misalkan :
+    $user-> name='Ahmad Faisal'; << ENTER >>
+    $user->email='ahmadfaisal2513@gmail.com'; << ENTER >>
+    $user->password= bcrypt('123456') << ENTER >> // untuk password harus di Enkripsi
+4. $user->save() << ENTER >>
+
+
+// ingin melihat isi dalam table user ada apa saja:
+$user->all() << ENTER >>
+
+// Membuat atau mengisi data baru :
+$user = new User << ENTER >>
+
+$user->name='Ahmad Faisal'; << ENTER >>
+$user->email='ahmadfaisal2513@gmail.com'; << ENTER >>
+$user->password= bcrypt('123456') << ENTER >>
+$user->save()
+
+
+// untuk melihat datanya :
+$user->all() << ENTER >>
+
+// untuk mencari user yang pertama :
+$user->first() << ENTER >>
+
+// untuk mencari user dengan ID nya 2 :
+$user->find(2) << ENTER >>
+
+// method untuk mencari yang tidak ada, jika ada tampilkan, dan jika tidak ada jangan tampilan null. langsung tampilkan errornya:
+$user->findOrFail(2000) << ENTER >>
+
+
+
