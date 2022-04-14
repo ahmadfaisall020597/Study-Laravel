@@ -9,7 +9,7 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title','slug','excerpt','body']; // memberikan izin pemasukan data sekaligus langsung semua, file ada di Note.
+    // protected $fillable = ['title','category_id','slug','excerpt','body']; // memberikan izin pemasukan data sekaligus langsung semua, file ada di Note.
 
-    // protected $guarded =['id']; // semua bisa berubah kecuali id, karna ada guard.
+    protected $guarded =['id']; // semua bisa berubah kecuali id, karna ada guard.
 }

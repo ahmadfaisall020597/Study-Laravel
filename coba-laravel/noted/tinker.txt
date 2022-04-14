@@ -18,3 +18,6 @@ Post::find(3)->update(['title'=>'Judul ketiga berubah'])
 // Merubah Excerpt dari judul :
 Post::Where('title','Judul Ke Tiga')->update(['excerpt' => 'tulis yang ingin diubah']) << ENTER >>
 
+
+// Mencari Category yang categorynya 1:
+Post::where('category_id', 1)->get()
