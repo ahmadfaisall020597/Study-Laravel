@@ -33,5 +33,12 @@ $user->find(2) << ENTER >>
 // method untuk mencari yang tidak ada, jika ada tampilkan, dan jika tidak ada jangan tampilan null. langsung tampilkan errornya:
 $user->findOrFail(2000) << ENTER >>
 
+// Membuat Model Post:
+php artisan make:model -m Post << ENTER >>
 
+-m untuk sekalian membuat migration
+
+// untuk Membuat Read More --> :
+$post->excerpt ='kalimat sedikit yang ditampilkan' << ENTER >>
+$post->body ='seluruh kalimat yang di tampilkan' << ENTER >>
 

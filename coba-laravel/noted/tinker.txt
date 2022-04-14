@@ -1,0 +1,20 @@
+// Tampilkan semua isi yang ada di POST :
+Post::all() << ENTER >>
+
+// Tampilan isi post yang pertama :
+Post::first() << ENTER >>
+
+// Tampilkan hanya judul yang ada di Post :
+Post::pLuck('title') << ENTER >>
+
+// Tampilan Post yang ID nya 2 :
+Post::find(2) << ENTER >>
+
+
+// merubah Judul Post :
+Post::find(3)->update(['title'=>'Judul ketiga berubah'])
+
+
+// Merubah Excerpt dari judul :
+Post::Where('title','Judul Ke Tiga')->update(['excerpt' => 'tulis yang ingin diubah']) << ENTER >>
+
