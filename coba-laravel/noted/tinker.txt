@@ -21,3 +21,6 @@ Post::Where('title','Judul Ke Tiga')->update(['excerpt' => 'tulis yang ingin diu
 
 // Mencari Category yang categorynya 1:
 Post::where('category_id', 1)->get()
+
+// Mengecek Relasi :
+$post->category << ENTER >>
