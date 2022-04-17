@@ -26,3 +26,7 @@ Post::create([
 
     class="mb-5" = untuk margin bottom membuat enter atau spacing tulisan
     class="border-bottom" = membuat garis bawah di setelah paragraf
+
+
+    // migrasi ulang include inputan database:
+    php artisan migrate:fresh --seed
