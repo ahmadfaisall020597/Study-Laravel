@@ -30,3 +30,11 @@ Post::create([
 
     // migrasi ulang include inputan database:
     php artisan migrate:fresh --seed
+
+
+    // untuk membuat factory di terminal :
+    php artisan make:factory Nama_factory
+    jika untuk membuat langsung tambahkan -mfs dibelakang Nama_factory
+    m = untuk migrate
+    f = untuk factory
+    s = seeder

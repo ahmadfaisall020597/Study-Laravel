@@ -18,8 +18,8 @@ class Post extends Model
         return $this->belongsTo(Category::class); // 1 Postingan mempunyai 1 category
     }
 
-    public function user()
+public function author()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'user_id'); // mengganti user_id alias author, memanggil user_id tetap parameter author
     }
 }
