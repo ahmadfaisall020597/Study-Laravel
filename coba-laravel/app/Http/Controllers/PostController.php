@@ -13,7 +13,7 @@ class PostController extends Controller
         return view('posts', [
             "title" => "All Posts",
             // "posts" => Post::all()
-            "posts" => Post::with(['author','category'])->latest()->get() // Penggunaan Eager Loading
+            "posts" => Post::latest()->get() // Penggunaan Eager Loading // dipanggil dari Post Model Protected With
         ]);
     }
 

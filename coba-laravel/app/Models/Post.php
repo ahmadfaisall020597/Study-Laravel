@@ -13,6 +13,8 @@ class Post extends Model
 
     protected $guarded =['id']; // semua bisa berubah kecuali id, karna ada guard.
 
+    protected $with = ['category','author']; // untuk di panggil di PostController jadi langsung menggunakan Latest
+
     public function category()
     {
         return $this->belongsTo(Category::class); // 1 Postingan mempunyai 1 category
