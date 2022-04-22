@@ -38,3 +38,6 @@ Post::create([
     m = untuk migrate
     f = untuk factory
     s = seeder
+
+    // diffForHumans() = perbedaan waktu yang sekarang agar mudah terbaca oleh manusia jika tidak memakai fungsi tersebut tanggal berbentuk acak
+    contoh penulisan ada di posts.blade.php line 18
