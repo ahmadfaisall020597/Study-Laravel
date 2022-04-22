@@ -9,9 +9,9 @@
     @if($posts->count())
 
         <div class="card mb-3">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="http://source.unsplash.com/1200x400/?{{ $posts[0]->category->name }}" class="card-img-top" alt="...">
             <div class="card-body text-center">
-                <h3 class="card-title">{{ $posts[0]->title }}</h3>
+                <h3 class="card-title"><a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none text-dark">{{ $posts[0]->title }}</a></h3>
                 <p>
                     <small class="text-muted">
                         By. <a href="/authors/{{ $posts[0]->author->username }}" class="text-decoration-none"> {{ $posts[0]->author->name }}</a> in <a href="/categories/{{ $posts[0]->category->slug }}"
