@@ -41,3 +41,25 @@ Post::create([
 
     // diffForHumans() = perbedaan waktu yang sekarang agar mudah terbaca oleh manusia jika tidak memakai fungsi tersebut tanggal berbentuk acak
     contoh penulisan ada di posts.blade.php line 18
+
+
+    // PostContoller :
+    public function index()
+    {
+        $posts = Post::latest();
+
+        if(request('search')){
+            $posts->where('title','like','%' . request('search') . '%');
+        }
+
+        return view('posts', [
+            "title" => "All Posts",
+            "active" => "posts",
+            // "posts" => Post::all()
+            "posts" => $posts->get()
+        ]);
+    }
+    Note : jika ada pencarian masuk ke if request baru masuk ke post->get()
+    jika tidak ada pencarian maka akan masuk ke post::latest();
+
+    ---------------------------------------------------------------------------------------------------------------------------
