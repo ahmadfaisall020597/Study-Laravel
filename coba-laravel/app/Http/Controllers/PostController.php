@@ -12,6 +12,7 @@ class PostController extends Controller
     {
         return view('posts', [
             "title" => "All Posts",
+            "active" => "posts",
             // "posts" => Post::all()
             "posts" => Post::latest()->get() // Penggunaan Eager Loading // dipanggil dari Post Model Protected With
         ]);
@@ -21,6 +22,7 @@ class PostController extends Controller
     {
         return view ('post',[
             "title" => "Single Post",
+            "active" => "posts",
             "post" => $post
         ]);
     }
