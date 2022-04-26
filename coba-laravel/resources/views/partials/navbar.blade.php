@@ -11,15 +11,20 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {{ ($active === "about") ? 'active' : '' }}"" href="/about">About</a>
+                        <a class="nav-link {{ ($active === "about") ? 'active' : '' }}" href="/about">About</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {{ ($active === "posts") ? 'active' : '' }}"" href="/posts">Posts</a>
+                        <a class="nav-link {{ ($active === "posts") ? 'active' : '' }}" href="/posts">Posts</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {{ ($active === "categories") ? 'active' : '' }}"" href="/categories">Categories</a>
+                        <a class="nav-link {{ ($active === "categories") ? 'active' : '' }}" href="/categories">Categories</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li>
+                        <a href="/login" class="nav-link {{ ($active === "login") ? 'active' : '' }}"><i class="bi bi-box-arrow-in-right"></i> Login</a>
                     </li>
                 </ul>
             </div>
