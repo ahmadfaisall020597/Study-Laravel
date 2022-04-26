@@ -63,3 +63,7 @@ Post::create([
     jika tidak ada pencarian maka akan masuk ke post::latest();
 
     ---------------------------------------------------------------------------------------------------------------------------
+
+
+// Membuat Controller :
+php artisan make:controller LoginController << LoginController adalah nama controllernya >>
