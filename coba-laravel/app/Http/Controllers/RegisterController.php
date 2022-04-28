@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
@@ -24,6 +25,12 @@ class RegisterController extends Controller
             'password' => 'required|min:5|max:255'
         ]);
 
+        // $validatedData['password'] = bcrypt($validatedData['password']); // fungsinya sama
+
+        $validatedData['password'] = Hash::make($validatedData['password']); // harus panggil classnya use Illuminate\Support\Facades\Hash;
+
         User::create($validatedData);
+
+        return redirect('/login');
     }
 }
