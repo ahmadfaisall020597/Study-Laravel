@@ -3,10 +3,10 @@
 @section('container')
 
 <div class="row justify-content-center">
-    <div class="col-md-5">
+    <div class="col-lg-5">
         <main class="form-registration">
             <h1 class="h3 mb-3 fw-normal text-center">FORM REGISTRATION</h1>
-            <form>
+            <form action="/register" method="post">
               {{-- <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> --}}
 
               <div class="form-floating">
