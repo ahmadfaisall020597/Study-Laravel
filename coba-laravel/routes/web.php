@@ -70,6 +70,7 @@ Route::get('/dashboard', function()
     return view('dashboard.index');
 })->middleware('auth');
 
+
 Route::resource('/dashboard/posts', DashboardPostController::class)
 ->middleware('auth'); // middleware auth agar tidak bisa di akses yg belum login / mencegah terjadinya hacking
 

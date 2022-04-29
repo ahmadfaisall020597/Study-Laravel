@@ -53,4 +53,9 @@ class Post extends Model
     {
         return $this->belongsTo(User::class,'user_id'); // mengganti user_id alias author, memanggil user_id tetap parameter author
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
