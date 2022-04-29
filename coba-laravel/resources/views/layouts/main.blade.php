@@ -13,8 +13,8 @@
 
         {{-- My Styles --}}
         <link rel="stylesheet" href="/css/style.css">
-
-        <title>Faisal MVC | {{ $title }}</title>
+        <link rel="icon" href="/img/logo.png">
+    <title>FAIS | {{ $title }}</title>
     </head>
     <body>
 
