@@ -29,6 +29,13 @@
                     @endforeach
                 </select>
             </div>
+
+            <div class="mb-3">
+                <label for="body" class="form-label">Body</label>
+                <input id="body" type="hidden" name="body">
+                <trix-editor input="body"></trix-editor>
+            </div>
+
             <button type="submit" class="btn btn-primary">Create Post</button>
         </form>
 
