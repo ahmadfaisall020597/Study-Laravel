@@ -69,3 +69,7 @@ Post::create([
 php artisan make:controller LoginController << LoginController adalah nama controllernya >>
 
 php artisan make:controller DashboardController --model=posts --resource
+
+
+// melihat daftar route
+php artisan route:list
